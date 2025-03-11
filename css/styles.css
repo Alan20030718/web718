@@ -1,0 +1,68 @@
+/* Reset default margins/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333; /* Dark background */
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Links styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 2rem;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #5f61f8; /* Highlight color on hover */
+}
+
+.nav-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Search Bar Styling */
+.search-container {
+    margin-right: 1rem;
+}
+
+.search-bar {
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+/* Page content (to avoid navbar overlap) */
+.content {
+    margin-top: 80px; /* Match navbar height */
+    padding: 20px;
+}
+
+h1 {
+    font-weight: normal;  /* Bold */
+    font-style: italic;
+}
