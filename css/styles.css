@@ -3,12 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-
-* {
     font-family: 'Poppins', sans-serif;
 }
+
 
 /* Navigation Bar */
 .navbar {
@@ -19,6 +16,16 @@
     top: 0;
     z-index: 1000;
 }
+/* ADD THIS - Crucial for overflow detection */
+.nav-links {
+    flex-grow: 1;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
 .nav-content {
     display: flex;
     justify-content: space-between;
@@ -27,7 +34,11 @@
     margin: 0 auto;
 }
 
-/* Links styling */
+
+.nav-links a:hover {
+    color: #909b2f; /* Highlight color on hover */
+}
+
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -35,10 +46,6 @@
     font-family: 'Poppins', sans-serif;
     transition: color 0.3s;
 }
-.nav-links a:hover {
-    color: #5f61f8; /* Highlight color on hover */
-}
-
 .nav-brand {
     font-weight: bold;
     font-size: 1.2rem;
@@ -46,7 +53,8 @@
 
 /* Search Bar Styling */
 .search-container {
-    margin-right: 1rem;
+    margin-right: 0;
+    order: 1;
 }
 
 .search-bar {
@@ -55,6 +63,14 @@
     border: 1px solid #ccc;
     width: 200px;
 }
+
+.hamburger {
+    display: none;
+    order: 2; /* Hamburger comes after search */
+    position: relative;
+    z-index: 1001; /* Ensure it's above dropdown */
+}
+
 
 /* Page content (to avoid navbar overlap) */
 .content {
@@ -66,3 +82,78 @@ h1 {
     font-weight: normal;  /* Bold */
     font-style: italic;
 }
+ .desktop-links {
+    display: flex;
+    gap: 1rem; /* Space between links */
+  }
+
+/* Show hamburger ONLY when links overflow */
+.navbar.overflowing .desktop-links {
+    display: none !important;
+}
+
+.navbar.overflowing .hamburger {
+    display: block !important;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.hamburger-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+    top: calc(100% + 5px);
+    
+  }
+
+  .hamburger-menu {
+    display: none;
+    
+    top: 100%;
+    right: 10px;
+    background-color: #333;
+    z-index: 1001;
+  }
+  .hamburger-menu a {
+    display: block;
+    color: white;
+    
+    text-decoration: none;
+    padding: 0.5rem 0;
+  }
+  
+  /* responsive Styles */
+  @media (max-width: 768px){
+    .desktop-links{
+        display: none;
+    }
+    .hamburger{
+        display: block !important;
+    }
+    /* Active state for mobile menu */
+    .hamburger-menu.active {
+        display: block;
+    }
+    /*Animate hamburger to X */
+     .hamburger.active .hamburger-line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+     } 
+  }
+
+  /*.desktop-links-wrapper {
+    width: 100px !important; 
+  }
+  */
