@@ -36,7 +36,7 @@
 
 
 .nav-links a:hover {
-    color: #909b2f; /* Highlight color on hover */
+    color: #b6c439; 
 }
 
 .nav-links a {
@@ -48,7 +48,9 @@
 }
 .nav-brand {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    color: #b6c439 !important;
+    
 }
 
 /* Search Bar Styling */
@@ -79,6 +81,10 @@
 }
 
 h1 {
+    font-weight: normal;  /* Bold */
+    font-style: italic;
+}
+h2 {
     font-weight: normal;  /* Bold */
     font-style: italic;
 }
@@ -113,18 +119,20 @@ h1 {
 
   .hamburger-menu {
     display: none;
-    
     top: 100%;
     right: 10px;
     background-color: #333;
     z-index: 1001;
   }
+
   .hamburger-menu a {
     display: block;
     color: white;
-    
     text-decoration: none;
     padding: 0.5rem 0;
+  }
+  .hamburger-menu a:hover{
+    color: #b6c439 !important;
   }
   
   /* responsive Styles */
@@ -153,7 +161,82 @@ h1 {
      } 
   }
 
-  /*.desktop-links-wrapper {
-    width: 100px !important; 
-  }
-  */
+
+/* about page */
+.scroller-wrapper {
+    width: 100%;
+    padding: 80px 200px 0;
+    box-sizing: border-box;
+    min-height: calc(100vh - 80px);
+}
+.about-container {
+    display: flex;
+    gap:  40px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px; /* Add this */
+}
+.about-sidebar {
+    
+    width: 300px; /* Increased width */
+    min-width: 300px; /* Prevent shrinking */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.profile-media {
+    width: 100%;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+}
+
+.animated-profile {
+    width: 50%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.about-main {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.about-header {
+    margin: 100px auto 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.page-header {
+   display: none;
+}
+.bio-content {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 800px;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1240px) {
+    
+    .about-container {
+        /* min-width: auto;
+        width: max-content; */
+        padding: 0 40px;
+    }
+}
+@media (max-width: 768px) {
+    
+    
+    .about-container {
+        /* width: 100%; */
+        flex-direction: column;
+        padding: 0 20px;
+    }
+}
