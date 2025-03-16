@@ -23,7 +23,6 @@
         <div class="about-container">
             
             <!-- Header -->
-            
             <!-- Left Column (Image + Info) -->
             <aside class="about-sidebar">
                 <!-- Profile Image -->
@@ -59,16 +58,19 @@
                     <h3 class="section-header">SOCIALS</h3>
                     <hr class="divider">
                     <div class="social-link">
-                        <img src="linkedin-icon.png" alt="LinkedIn">
-                        <a href="#">@Shuhao Fan</a>
+                        <img src="img/linkedin.png" alt="LinkedIn">
+                        <a href="https://www.linkedin.com/in/shuhao-alan-fan/">@Shuhao Fan</a>
                     </div>
                     <div class="social-link">
-                        <img src="instagram-icon.png" alt="Instagram">
-                        <a href="#">@YourInstagram</a>
+                        <img src="img/instagram.jpg" alt="Instagram">
+                        <a href="https://www.instagram.com/alanfan030718/?hl=en">@alanfan030718</a>
                     </div>
                 </div>
             </aside>
-           
+
+            <div class="sidebar-bio-spacer"></div>
+
+
             <main class="about-main">
                 <header class="page-header">
                     <h1>About Me</h1>
@@ -81,6 +83,25 @@
             </main>
         </div>
     </div>
- 
+    <!-- for mobile only will research -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.createElement('button');
+        toggleButton.className = 'bio-mobile-toggle';
+        toggleButton.textContent = 'Show Bio';
+        
+        const bioContent = document.querySelector('.bio-content');
+        if (bioContent) {
+            bioContent.insertAdjacentElement('beforebegin', toggleButton);
+            
+            toggleButton.addEventListener('click', () => {
+                bioContent.classList.toggle('active');
+                toggleButton.textContent = bioContent.classList.contains('active') 
+                    ? 'Hide Bio' 
+                    : 'Show Bio';
+            });
+        }
+    });
+    </script>
 </body>
 </html>

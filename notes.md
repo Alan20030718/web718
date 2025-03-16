@@ -24,3 +24,7 @@ Top bar: about me  .... Portfolio & search bar
         - finished off hover effect & the top nav bar. (maybe will add a little scope icon for the search bar).
         - Working on about me page.
         - About me page rough setup, stuff to fix: bullet points under skills section...
+
+
+### day 3: 03/16/2025
+        - .,.
