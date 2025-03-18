@@ -170,8 +170,8 @@ h2 {
 .scroller-wrapper {
     width: 100%;
     /* padding: 80px 200px 0; */
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
     box-sizing: border-box;
     min-height: calc(100vh - 80px);
 }
@@ -224,7 +224,7 @@ h2 {
 
 /* Spacing between sidebar and bio content */
 .sidebar-bio-spacer {
-    flex: 0 0 40px; /* Fixed gap size */
+    flex: 0 0 10px; /* Fixed gap size */
 }
 
 .profile-media {
@@ -316,7 +316,7 @@ h2 {
 /* Spacer class for desktop layout */
 @media (min-width: 1025px) {
     .sidebar-bio-spacer {
-        flex: 0 0 40px; /* Matches margin-left value */
+        flex: 0 0 10px; /* Matches margin-left value */
     }
 }
 @media (max-width: 768px) {
@@ -324,6 +324,23 @@ h2 {
     .about-container {
         /* width: 100%; */
         flex-direction: column;
-        padding: 0 20px;
+        padding: 0 40px;
     }
 }
+
+.cs-text {
+    color: #000000; /* Default color */
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .cs-text:hover {
+    color: #ff4655;
+    
+    text-shadow: 0 0 8px rgba(255, 70, 85, 0.5); /* Glow effect */
+    cursor: url('../img/cursor.cur'), auto !important;   
+  }
+ 
+  /* html {
+    cursor: url('../img/cursor.cur'), auto;
+  } */

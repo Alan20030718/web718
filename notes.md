@@ -28,3 +28,10 @@ Top bar: about me  .... Portfolio & search bar
 
 ### day 3: 03/16/2025
         - .,.
+        - added some more minor improvements for about me page.
+
+
+### day 4: 03/18/2025
+        -
+  
+
