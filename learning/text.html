@@ -1,6 +1,7 @@
 <style>
         /* applying to all paragraphs */
         /* CSS specificity: more specific selector has higher priority */
+        /* padding = spacing inside a paragraph */
         p {
             /* font default times new roman */
             font-family: Arial;
@@ -21,7 +22,7 @@
         .video-stats{
             font-size: 14px;
             color: rgb(96,96,96);
-            margin-bottom: 20;
+            margin-bottom: 20px;
         }
         .video-author{
             font-size: 14px;
@@ -33,7 +34,37 @@
             color: rgb(96,96,96);
             width: 280px;
             line-height: 22px;
+            margin-bottom: 100px;
         }
+
+        .apple-text{
+            margin-bottom: 50px;
+            font-size: 14px;
+            background-color: rgb(227,65,64);
+            color: white;
+            text-align: center;
+            padding-top: 18px;
+            padding-bottom: 18px;
+            
+
+        }
+        /* add margin to left of texts by adding margin-left */
+        .span-example{
+            color: red;
+            margin-left: 12px;
+            margin-bottom: 100px;
+        }
+        .span-example:hover{
+            text-decoration: underline;
+        }
+        .shop-link{
+            cursor: pointer;
+        }
+        .shop-link:hover{
+            text-decoration: underline;
+            
+        }
+
 </style>
 
 
@@ -54,3 +85,57 @@
 <p class="video-description">
     Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
 </p>
+
+<p class = "apple-text">
+    Shop early for the best selection of holiday favourites. <span class="shop-link">shop now &#62;</span>  
+</p>
+
+<!-- strong elemnt = bold -->
+<!-- u elemnt = underscored -->
+ <!-- span element is just normal tax, could add class element to those element, 
+  strong and u has default already, but you could add to it -->
+<p>
+    Shop early for the <strong>best selection</strong>  of <u>holiday</u> favourites. <span class="span-example">Shop now</span> &#62;
+</p>
+
+
+<style>
+    .new{
+        text-align: center;
+        color: orange;
+        margin: 5px;
+    }
+    .mbp{
+        font-size: 24px;
+        text-align: center;
+        margin: 5px;
+
+        text-decoration: solid;
+    }
+    .spc{
+        font-size: 40px;
+        text-align: center;
+        text-decoration: bold;
+        margin: 5px;
+       
+    }
+    .from{
+        font-size: 18px;
+        text-align: center;
+        margin: 5px;
+    }
+    .buy{
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+        
+    }
+   
+</style>
+
+
+
+<h1 class="new"> New</h1>
+<p class="mbp"> <strong>MacBook Pro </strong></p>
+<p class="spc"><strong>Supercharged for pros.</strong></p>
+<p class="from">From &#36;1999</p>
